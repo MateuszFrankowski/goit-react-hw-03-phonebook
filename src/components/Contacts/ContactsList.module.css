@@ -1,0 +1,38 @@
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 4px;
+  padding: 5px;
+}
+.item {
+  width: 100%;
+  display: flex;
+  padding: 2px 5px 2px 2px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 20px;
+}
+.item:nth-child(even) {
+  background-color: #ddd;
+}
+.item:nth-child(odd) {
+  background-color: transparent;
+}
+.button {
+  border-radius: 25%;
+  width: 3rem;
+  height: 2rem;
+}
+.button:hover {
+  background-color: red;
+}
+
+.name {
+  font-weight: 500;
+  /* font-size: 1rem; */
+}
