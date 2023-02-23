@@ -37,21 +37,10 @@ export class App extends Component {
       ],
     });
   };
-  handleRemoveData = evt => {
-    let array = [...this.state.contacts];
-    console.log('array,', array);
-    const nameToRemove = evt.target.id;
-
-    const removeContact = name => {
-      const index = array.findIndex(function (contact) {
-        return contact.name === name;
-      });
-      if (index > -1) {
-        array.splice(index, 1);
-        this.setState({ contacts: array });
-      }
-    };
-    removeContact(nameToRemove);
+  handleRemoveData = id => {
+    this.setState(state => ({
+      contacts: state.contacts.filter(contact => contact.id !== id),
+    }));
   };
 
   componentDidMount() {
